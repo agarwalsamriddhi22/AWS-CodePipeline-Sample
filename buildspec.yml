@@ -4,7 +4,10 @@ phases:
   build:
     commands:
       - echo Build completed on `date`
+      - mvn pre-clean
+      - mvn compile
       - mvn package
+      - mvn validate
 
 artifacts:
   files:
